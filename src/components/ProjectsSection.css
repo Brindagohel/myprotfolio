@@ -1,0 +1,226 @@
+/* Projects Section Styles */
+.projects-section {
+  position: relative;
+  background-color: var(--bg-surface);
+  padding: 100px 0;
+  border-bottom: 1px solid rgba(232, 196, 201, 0.4);
+}
+
+/* Spotlight Header with integrated portrait */
+.projects-spotlight-bar {
+  background: linear-gradient(135deg, #FDF4F6 0%, #F8E2E7 100%);
+  border: 1.5px solid var(--rose-border);
+  border-radius: var(--radius-lg);
+  padding: 40px 50px;
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+  box-shadow: var(--shadow-subtle);
+}
+
+.spotlight-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-heading {
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.2;
+  margin: 12px 0 16px;
+}
+
+.projects-subtext {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+/* Integrated Portrait Spot */
+.projects-portrait-spot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.projects-mini-badge {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.projects-circle-backdrop {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FCECEE 0%, #F6D3DA 100%);
+  box-shadow: 0 12px 30px rgba(156, 79, 91, 0.12);
+  z-index: 1;
+}
+
+/* Filter Row */
+.projects-filter-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.proj-filter-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-page);
+  border: 1px solid var(--rose-border);
+  color: var(--text-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.proj-filter-btn:hover {
+  background-color: var(--rose-subtle);
+  color: var(--rose-primary);
+  border-color: var(--rose-primary);
+}
+
+.proj-filter-btn.active {
+  background-color: var(--rose-primary);
+  color: #FFFFFF;
+  border-color: var(--rose-primary);
+  box-shadow: 0 4px 12px rgba(156, 79, 91, 0.25);
+}
+
+/* Projects Cards Grid */
+.student-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin-bottom: 30px;
+}
+
+.student-project-card {
+  background: #FFFFFF;
+  border: 1px solid var(--rose-border);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.student-project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--rose-primary);
+  box-shadow: var(--shadow-card);
+}
+
+.proj-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.proj-folder-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: var(--rose-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.proj-links {
+  display: flex;
+  gap: 10px;
+}
+
+.proj-icon-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--bg-page);
+  border: 1px solid var(--rose-border);
+  color: var(--rose-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.proj-icon-link:hover {
+  background-color: var(--rose-primary);
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+.proj-type-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.proj-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-heading);
+  margin-bottom: 12px;
+}
+
+.proj-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin-bottom: 22px;
+  flex: 1;
+}
+
+.proj-tech-stack {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background-color: var(--bg-page);
+  border: 1px solid rgba(232, 196, 201, 0.6);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.projects-disclaimer {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .projects-spotlight-bar {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .spotlight-text {
+    align-items: center;
+  }
+  .student-projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
